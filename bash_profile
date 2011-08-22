@@ -1,10 +1,12 @@
-# Homebrew programs in top of PATH
-PATH=/usr/local/bin:$PATH
-export PATH
+if [ "$(uname -s)" == "Darwin" ]; then
+	# Homebrew programs in top of PATH
+	PATH=/usr/local/bin:$PATH
+	export PATH
 
-# Homebrew tab completion.
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-	. `brew --prefix`/etc/bash_completion
+	# Homebrew tab completion.
+	if [ -f `brew --prefix`/etc/bash_completion ]; then
+		. `brew --prefix`/etc/bash_completion
+	fi
 fi
 
 # Colors
@@ -15,8 +17,10 @@ export CLICOLOR="auto"
 # Aliases
 alias ls="ls -G"
 
-# PS1
-PS1='\u@\h:\w$(__git_ps1 " \[\033[1;32m\](%s)\[\033[0m\]") \$ '
+if [ "$(uname -s)" == "Darwin" ]; then
+	# PS1
+	PS1='\u@\h:\w$(__git_ps1 " \[\033[1;32m\](%s)\[\033[0m\]") \$ '
+fi
 
 # History
 ## Append history on exit
