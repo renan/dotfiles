@@ -1,0 +1,15 @@
+[user]
+	name = Renan Gonçalves
+	email = renan.saddam@gmail.com
+[color]
+	ui = true
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+[core]
+	excludesfile = ~/.dotfiles/git/ignore
