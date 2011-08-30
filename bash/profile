@@ -17,9 +17,11 @@ export CLICOLOR="auto"
 # Aliases
 alias ls="ls -G"
 alias cake13="/Users/renan/Sites/cakephp/1.3/cake/console/cake"
+alias cake2="/Users/renan/Sites/cakephp/2.0/lib/Cake/Console/cake"
 
 if [ "$(uname -s)" == "Darwin" ]; then
 	# PS1
+	GIT_PS1_SHOWDIRTYSTATE=true
 	PS1='\u@\h:\w$(__git_ps1 " \[\033[1;32m\](%s)\[\033[0m\]") \$ '
 fi
 
