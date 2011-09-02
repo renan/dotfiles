@@ -19,6 +19,9 @@ alias ls="ls -G"
 alias cake13="/Users/renan/Sites/cakephp/1.3/cake/console/cake"
 alias cake2="/Users/renan/Sites/cakephp/2.0/lib/Cake/Console/cake"
 
+## Git aliases
+. ~/.dotfiles/git/aliases.sh
+
 if [ "$(uname -s)" == "Darwin" ]; then
 	# PS1
 	GIT_PS1_SHOWDIRTYSTATE=true
