@@ -22,10 +22,16 @@ alias cake2="/Users/renan/Sites/cakephp/2.0/lib/Cake/Console/cake"
 ## Git aliases
 . ~/.dotfiles/git/aliases.sh
 
+## Colours
+RED="\[\033[0;31;m\]"
+BLUE="\[\033[0;34m\]"
+RESET="\[\033[0m\]"
+
 if [ "$(uname -s)" == "Darwin" ]; then
 	# PS1
 	GIT_PS1_SHOWDIRTYSTATE=true
-	PS1='\u@\h:\w$(__git_ps1 " \[\033[1;32m\](%s)\[\033[0m\]") \$ '
+	GIT_PS1='$(__git_ps1 " \[\033[0;31;m\](%s)")'
+	PS1="\u@\h:$BLUE\w$GIT_PS1$RESET \$ "
 fi
 
 # History
