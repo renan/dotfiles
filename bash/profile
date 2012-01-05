@@ -1,17 +1,15 @@
+# Node modules
+export NODE_PATH=/usr/local/lib/node_modules
+
 if [ "$(uname -s)" == "Darwin" ]; then
 	# Homebrew programs in top of PATH
-	PATH=/usr/local/bin:/usr/local/sbin:$PATH
-	export PATH
+	export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 	# Homebrew tab completion.
 	if [ -f `brew --prefix`/etc/bash_completion ]; then
 		completion=true
 		. `brew --prefix`/etc/bash_completion
 	fi
-
-	# Node modules
-	NODE_PATH=/usr/local/lib/node_modules
-	export NODE_PATH
 elif [ -f /etc/bash_completion.d/git ]; then
 	# Git tab completion.
 	completion=true
