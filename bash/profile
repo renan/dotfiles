@@ -26,7 +26,8 @@ alias ls="ls -G"
 
 if [ "$(uname -s)" == "Darwin" ]; then
 	alias cake13="/Users/renan/Sites/cakephp/1.3/cake/console/cake"
-	alias cake2="/Users/renan/Sites/cakephp/2.0/lib/Cake/Console/cake"
+	alias cake20="/Users/renan/Sites/cakephp/2.0/lib/Cake/Console/cake"
+	alias cake21="/Users/renan/Sites/cakephp/2.1/lib/Cake/Console/cake"
 fi
 
 ## Git aliases
