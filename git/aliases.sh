@@ -12,7 +12,7 @@ gpull () {
 	local s
 	local head
 	s=$(git stash 2>/dev/null)
-	head=$(basename $(git symbolic-ref HEAD 2>/dev/null) 2>/dev/null)
+	head=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
 	if [ "" == "$head" ]; then
 		echo "Not on a branch, can't pull"
 		__git_stash_pop "$s"
@@ -34,7 +34,7 @@ gpull () {
 #
 gpush () {
 	local head
-	head=$(basename $(git symbolic-ref HEAD 2>/dev/null) 2>/dev/null)
+	head=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
 	if [ "" = "$head" ]; then
 		echo "Not on a branch, can't push"
 		return 1
