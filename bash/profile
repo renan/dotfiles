@@ -34,17 +34,22 @@ fi
 ## Git aliases
 . ~/.dotfiles/git/aliases.sh
 
+# Prompt
 ## Colours
 RED="\[\033[0;31;m\]"
 BLUE="\[\033[0;34m\]"
+YELLOW="\[\033[0;33m\]"
 RESET="\[\033[0m\]"
 
-# PS1
+## Git support
 if [ $completion ]; then
 	GIT_PS1_SHOWDIRTYSTATE=true
 	GIT_PS1='$(__git_ps1 " \[\033[0;31;m\](%s)")'
-	PS1="\u@\h:$BLUE\w$GIT_PS1$RESET \$ "
 fi
+
+SYMBOL=`echo -e "\xE2\x9E\x9C"` # echo -n ➜ | hexdump
+PS1="$YELLOW[\d \t]$RESET $BLUE\w$GIT_PS1$RESET
+\u@\h $RED$SYMBOL$RESET  "
 
 # History
 ## Append history on exit
