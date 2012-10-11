@@ -29,6 +29,7 @@ if [ "$(uname -s)" == "Darwin" ]; then
 	alias cake20="/Users/renan/Sites/cakephp/2.0/lib/Cake/Console/cake"
 	alias cake21="/Users/renan/Sites/cakephp/2.1/lib/Cake/Console/cake"
 	alias cake22="/Users/renan/Sites/cakephp/2.2/lib/Cake/Console/cake"
+	alias cake23="/Users/renan/Sites/cakephp/2.3/lib/Cake/Console/cake"
 fi
 
 ## Git aliases
