@@ -3,7 +3,7 @@ export NODE_PATH=/usr/local/lib/node_modules
 
 if [ "$(uname -s)" == "Darwin" ]; then
 	# Homebrew programs in top of PATH
-	export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+	export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 
 	# Homebrew tab completion.
 	if [ -f `brew --prefix`/etc/bash_completion ]; then
