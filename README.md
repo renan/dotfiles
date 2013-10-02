@@ -8,4 +8,4 @@ Installation
 
 You can clone this repository into `~/.dotfiles` and run `~/.dotfiles/install.sh`
 
-Or simply run `wget https://raw.github.com/renansaddam/dotfiles/master/install.sh -O - | sh`
+Or simply run `wget https://raw.github.com/renan/dotfiles/master/install.sh -O - | sh`
