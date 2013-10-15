@@ -13,3 +13,5 @@
 	co = checkout
 [core]
 	excludesfile = ~/.dotfiles/git/ignore
+[credential]
+	helper = osxkeychain
