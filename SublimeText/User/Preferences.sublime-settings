@@ -1,0 +1,10 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+	"draw_white_space": "all",
+	"font_face": "Inconsolata",
+	"font_size": 13,
+	"ignored_packages":
+	[
+		"Vintage"
+	]
+}
