@@ -27,6 +27,7 @@ export CLICOLOR="auto"
 
 # Aliases
 alias ls="ls -G"
+alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 if [ "$(uname -s)" == "Darwin" ]; then
 	alias cake13="/Users/renan/Sites/cakephp/1.3/cake/console/cake"
