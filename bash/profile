@@ -3,7 +3,7 @@ export NODE_PATH=/usr/local/lib/node_modules
 
 # Golang
 export GOPATH=$HOME/go
-export PATH=$GOPATH:$PATH
+export PATH=$GOPATH/bin:$PATH
 
 if [ "$(uname -s)" == "Darwin" ]; then
 	# Homebrew programs in top of PATH
