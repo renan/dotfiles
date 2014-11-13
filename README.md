@@ -9,3 +9,12 @@ Installation
 You can clone this repository into `~/.dotfiles` and run `~/.dotfiles/install.sh`
 
 Or simply run `wget https://raw.github.com/renan/dotfiles/master/install.sh -O - | sh`
+
+
+Suggested Formulas
+------------------
+
+```shell
+brew install bash-completion
+brew install git
+```

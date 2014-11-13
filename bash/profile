@@ -51,15 +51,21 @@ BLUE="\[\033[0;34m\]"
 YELLOW="\[\033[0;33m\]"
 RESET="\[\033[0m\]"
 
+SYMBOL=`echo -e "\xE2\x9E\x9C"` # echo -n ➜ | hexdump
+PS1_START="$YELLOW[\d \t]$RESET $BLUE\w"
+PS1_END="
+$RESET\u@\h $RED$SYMBOL$RESET  "
+
+PS1="$PS1_START$PS1_END"
+
 ## Git support
 if [ $completion ]; then
 	GIT_PS1_SHOWDIRTYSTATE=true
-	GIT_PS1='$(__git_ps1 " \[\033[0;31;m\](%s)")'
+	GIT_PS1_SHOWCOLORHINTS=true
+	
+	PROMPT_COMMAND='__git_ps1 "$PS1_START" "$PS1_END";'
+	$PROMPT_COMMAND
 fi
-
-SYMBOL=`echo -e "\xE2\x9E\x9C"` # echo -n ➜ | hexdump
-PS1="$YELLOW[\d \t]$RESET $BLUE\w$GIT_PS1$RESET
-\u@\h $RED$SYMBOL$RESET  "
 
 # History
 ## Append history on exit
