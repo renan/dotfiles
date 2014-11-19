@@ -20,6 +20,14 @@ elif [ -f /etc/bash_completion.d/git ]; then
 	. /etc/bash_completion.d/git
 fi
 
+# SSH Keys
+loaded="$(ssh-add -L)"
+if [ $? -ne 0 ]; then
+	for file in `find $HOME/.ssh -name "*rsa"`; do
+		ssh-add $file
+	done
+fi
+
 # Unicode
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
