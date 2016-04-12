@@ -16,3 +16,5 @@
 	excludesfile = ~/.dotfiles/git/ignore
 [credential]
 	helper = osxkeychain
+[commit]
+	gpgsign = true
