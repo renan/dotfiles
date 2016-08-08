@@ -3,7 +3,7 @@
 # Clone if not found
 if ! [ -d "$HOME/.dotfiles" ]; then
 	echo 'Cloning repository'
-	git clone git@github.com:renan/dotfiles.git $HOME/.dotfiles
+	git clone https://github.com/renan/dotfiles.git $HOME/.dotfiles
 fi
 
 # Iterate through install.sh files
