@@ -76,6 +76,9 @@ if [ $completion ]; then
 fi
 
 # History
+## Log times, with colors
+export HISTTIMEFORMAT=`echo -e "\033[1;34m%F \033[1;31m%T \033[0m"`
+
 ## Append history on exit
 shopt -s histappend
 
