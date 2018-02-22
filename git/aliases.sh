@@ -8,7 +8,7 @@ gpull () {
 	local head
 	stash=$(git stash 2>/dev/null)
 	head=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
-	if [ "" == "$head" ]; then
+	if [ "" = "$head" ]; then
 		echo "Not on a branch, can't pull"
 		__git_stash_pop "$stash"
 		return 1
