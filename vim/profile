@@ -1,2 +1,5 @@
 " Enable syntax highlight
 syntax on
+
+" Wrap commit message lines at 72 chars
+au BufNewFile,BufRead COMMIT_EDITMSG set tw=72
