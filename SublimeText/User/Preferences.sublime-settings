@@ -1,10 +1,9 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
-	"draw_white_space": "all",
-	"font_face": "Inconsolata",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (light).sublime-color-scheme",
 	"font_size": 13,
 	"ignored_packages":
 	[
 		"Vintage"
-	]
+	],
+	"theme": "Default.sublime-theme"
 }
