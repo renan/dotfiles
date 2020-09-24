@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Install needed/desired packages
+brew install git tig ansible terraform curl htop ncdu tree kubernetes-cli helm@2 helm
+
 # Clone if not found
 if ! [ -d "$HOME/.dotfiles" ]; then
 	echo 'Cloning repository'
