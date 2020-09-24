@@ -13,6 +13,7 @@
 	ci = commit
 	co = checkout
 [core]
+	editor = vim
 	excludesfile = ~/.dotfiles/git/ignore
 	hookspath = ~/.dotfiles/git/hooks
 [credential]
