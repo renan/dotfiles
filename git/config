@@ -1,7 +1,7 @@
 [user]
 	name = Renan Gonçalves
 	email = renan.saddam@gmail.com
-	signingkey = B3A10369
+	signingkey = 5B11E317B3A10369
 [color]
 	ui = true
 	status = auto
