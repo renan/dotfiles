@@ -1,8 +1,14 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.krew/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/bin:$HOME/.krew/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/renan/.oh-my-zsh
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/build-tools
+export PATH=$HOME/.fastlane/bin:$PATH
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -64,10 +70,11 @@ source $ZSH/oh-my-zsh.sh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# GPG Signing
+export GPG_TTY=`tty`
+
 # Git aliases
 . ~/.dotfiles/git/aliases.sh
 
 # Other aliases
-alias helm2="/usr/local/Cellar/helm@2/2.16.9/bin/helm"
-alias helm3="/usr/local/Cellar/helm/3.2.4_1/bin/helm"
 alias sed="/usr/local/bin/gsed"

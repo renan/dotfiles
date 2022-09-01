@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
 # Install needed/desired packages
-brew install git tig gpg1 ansible terraform curl gsed htop ncdu tree kubernetes-cli helm@2 helm
+brew install git tig gpg2 gnupg pinentry-mac
+brew install ansible terraform curl gsed htop ncdu tree watch kubernetes-cli helm@2 helm
+
+brew tap johanhaleby/kubetail
+brew install kubetail
 
 # Clone if not found
 if ! [ -d "$HOME/.dotfiles" ]; then
