@@ -1,14 +1,18 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.krew/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/bin:$HOME/.krew/bin:/usr/local/opt/coreutils/libexec/gnubin:/opt/homebrew/opt/grep/libexec/gnubin:/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/opt/ruby/bin:/Users/renan/.yarn/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/renan/.oh-my-zsh
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export ANDROID_SDK_ROOT=$ANDROID_HOME
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/build-tools
-export PATH=$HOME/.fastlane/bin:$PATH
+#export ANDROID_SDK_ROOT=$ANDROID_HOME
+#export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/build-tools
+#export PATH=$HOME/.fastlane/bin:$PATH
+
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -69,6 +73,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
 
 # GPG Signing
 export GPG_TTY=`tty`
@@ -76,5 +81,17 @@ export GPG_TTY=`tty`
 # Git aliases
 . ~/.dotfiles/git/aliases.sh
 
+# 1Password
+export OP_BIOMETRIC_UNLOCK_ENABLED=true
+eval "$(op completion zsh)"; compdef _op op
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 # Other aliases
-alias sed="/usr/local/bin/gsed"
+alias sed="/opt/homebrew/bin/gsed"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias vscode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
