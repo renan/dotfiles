@@ -17,8 +17,6 @@
 	excludesfile = ~/.dotfiles/git/ignore
 	hookspath = ~/.dotfiles/git/hooks
 [credential]
-	helper = osxkeychain
-	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [commit]
 	gpgsign = true
